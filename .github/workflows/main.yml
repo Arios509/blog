@@ -24,8 +24,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+ 
     - uses: actions/checkout@v1
     # publish to a branch in current repo using GITHUB_TOKEN and other default settings
+    - uses: oleksiyrudenko/gha-git-credentials@v1
+      with:
+        name: 'Arios'
+        email: '${{ secrets.GIT_EMAIL }}'
+        actor: '${{ secrets.GIT_USERNAME }}'
+        token: '${{ secrets.GIT_CREDENTIALS }}'
     - uses: oleksiyrudenko/gha-git-credentials@v1
       with:
         token: '${{ secrets.GIT_CREDENTIALS }}'

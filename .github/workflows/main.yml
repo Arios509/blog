@@ -31,8 +31,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: git checkout dev
-#     - name: Install angular cli
-#       run: npm install -g @angular/cli@latest
+    - name: Install angular cli
+      run: npm install -g @angular/cli@latest
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: npm install

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "blog": {
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "src/styles.sass"
             ],
             "scripts": []
           },
@@ -88,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.sass"
             ],
             "scripts": []
           }
@@ -117,8 +118,21 @@
               "devServerTarget": "blog:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "blog"
+    }
+  },
+  "defaultProject": "blog",
+  "cli": {
+    "analytics": "858c5e88-bd80-4997-b731-87ff15efef70"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "sass"
+    }
+  }
 }

@@ -21,7 +21,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@dev
-    - uses: actions/setup-node@master
+    - uses: actions/setup-node@dev
       with:
         node-version: '12.8'
     # Runs a single command using the runners shell

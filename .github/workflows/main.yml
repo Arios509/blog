@@ -26,6 +26,9 @@ jobs:
         node-version: '12.8'
     # Runs a single command using the runners shell
     - name: Run a one-line script
+      run: npm install -g @angular/cli@latest
+    # Runs a single command using the runners shell
+    - name: Run a one-line script
       run: npm install
 
     # Runs a set of commands using the runners shell

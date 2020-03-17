@@ -27,15 +27,18 @@ jobs:
  
     - uses: actions/checkout@v1
     # publish to a branch in current repo using GITHUB_TOKEN and other default settings
-    - uses: oleksiyrudenko/gha-git-credentials@v1
+#     - uses: oleksiyrudenko/gha-git-credentials@v1
+#       with:
+#         name: 'Arios'
+#         email: '${{ secrets.GIT_EMAIL }}'
+#         actor: '${{ secrets.GIT_USERNAME }}'
+#         token: '${{ secrets.GIT_CREDENTIALS }}'
+#     - uses: oleksiyrudenko/gha-git-credentials@v1
+#       with:
+#         token: '${{ secrets.GIT_CREDENTIALS }}'
+    - uses: fregante/setup-git-token@v1
       with:
-        name: 'Arios'
-        email: '${{ secrets.GIT_EMAIL }}'
-        actor: '${{ secrets.GIT_USERNAME }}'
-        token: '${{ secrets.GIT_CREDENTIALS }}'
-    - uses: oleksiyrudenko/gha-git-credentials@v1
-      with:
-        token: '${{ secrets.GIT_CREDENTIALS }}'
+        token: ${{ secrets.GIT_CREDENTIALS }}
     - uses: actions/setup-node@v1
       with:
         node-version: '12.8'

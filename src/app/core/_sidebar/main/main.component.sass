@@ -24,23 +24,41 @@ main
   @include for-phone-only
     margin: 0
 
- 
+.dark-theme 
+  background: #12181b
+  text-color: #b2becd
+  color: #fff
+  --nav-shadow: 4px 0 10px -3px #010101
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.38)
+  --toc-shadow: rgba(0,0,0,0.7) 0px 10px 20px 0px
+  --nav-bg: #2a2e35
+  --tag-bg: #454e56
+  --code-bg: #22262f
+  --card-bg: #2a2e35
+  --overlay-bg: rgba(0,0,0,0.9)
+  --h-border: 2px dashed #2a2e35
+  --card-radius: 0.25em
+  transition: all .3s ease
+
 .navbar 
   position: fixed
+  
   background-color: $--bg-primary
   transition: width 600ms ease
+  width: 5rem
+
   @include for-phone-only   
     bottom: 0
     width: 100vw
     height: 5rem 
   @include for-tablet-only   
     top: 0
-    width: 5rem
     height: 100vh
 
-.navbar:hover 
-  @include for-tablet-only
+.navbar:not(:focus):hover 
     width: 16rem
+.navbar:focus
+  width: 100rem
 
 .navbar-nav 
   list-style: none

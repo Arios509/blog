@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.sass']
 })
 export class MainComponent implements OnInit {
+value: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  clickFunction = () => {
+    console.log('clicked');
+    this.value = 'Clicked';
+  }
 }

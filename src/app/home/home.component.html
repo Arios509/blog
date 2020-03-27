@@ -1,11 +1,43 @@
+<h1>Hello world</h1>
 
-  <h1>Helldo his is asd</h1>
+<p>
+  Is time to build up one function blog, with sidebar (Able to click), home page show a blog post. Lets do it.
+</p>
+<div class="flex-custom">
+  <div>re</div>
+  <div>re</div>
+  <div>re</div>
+  <div>re</div>
+  <div>re</div>
+  <div>re</div>
 
-  <p>
-    This is a testing place to check all the things that i didnt try before.
-  </p>
+</div>
+
+
+
+<div *ngFor="let data of datas">
+  <div [innerHTML]="data.value | uppercase">
+  </div>
+  {{data.value | number: '.2' | casesensitive}}
+</div>
 
 
 
 
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
 
+  <input formControlName="name">
+  <input formControlName="email">
+  <button type="submit">Submit</button>
+</form>
+<div class="mt-5"></div>
+<h1>Register form</h1>
+
+
+<form [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+  <input formControlName="username">
+  <input formControlName="password">
+  <input formControlName="firstname">
+  <input formControlName="lastname">
+  <button type="submit">Submit</button>
+</form>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthenticationService } from '../core/_services/authentication.service';
 import { RegisterService } from '../core/_services/register.service';
+import { Observable, timer } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,18 @@ export class HomeComponent implements OnInit {
 
   form: FormGroup;
   registerForm: FormGroup;
+  everySecond$ : Observable<number> = timer(0, 1000);
   datas = [
     { value: 1 },
     { value: 2 },
     { value: 1 },
-  ]
+  ];
   constructor(private fb: FormBuilder,
-    private _authenticate: AuthenticationService,
-    private _register: RegisterService) { }
+              private _authenticate: AuthenticationService,
+              private _register: RegisterService) { }
 
   ngOnInit(): void {
+    // this.everySecond$.subscribe(second => console.log(second));
     this.initialForm();
     this.initialRegisterForm();
   }
@@ -46,8 +49,8 @@ export class HomeComponent implements OnInit {
 
   onSubmit = () => {
     this._authenticate.login('username', 'password').subscribe(res => {
-      console.log(res)
-    })
+      console.log(res);
+    });
     // console.log('success clicked')
   }
 
@@ -57,7 +60,7 @@ export class HomeComponent implements OnInit {
       password: this.registerForm.controls.password.value,
       firstname: this.registerForm.controls.firstname.value,
       lastname: this.registerForm.controls.lastname.value,
-    }
+    };
 
     this._register.register(form)
       .subscribe(result => {

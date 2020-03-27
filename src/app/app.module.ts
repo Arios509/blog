@@ -12,6 +12,8 @@ import { AppPipeModule } from './app-pipes.module';
 import { fakeBackendProvider } from './core/_helpers/fakebackend';
 import { JwtInterceptor } from './core/_helpers/jwt.interceptop';
 import { ErrorInterceptor } from './core/_helpers/error.interceptors';
+import { ContactComponent } from './module/contact/contact.component';
+import { ResumeComponent } from './module/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ErrorInterceptor } from './core/_helpers/error.interceptors';
     MainComponent,
     HomeComponent,
     BlogComponent,
+    ContactComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

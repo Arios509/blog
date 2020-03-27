@@ -8,30 +8,31 @@
     </li>
 
     <li class="nav-item">
-      <a [routerLink]="['/blog']" routerLinkActive="link-active" class="nav-link">
+      <a [routerLink]="['/home']" routerLinkActive="link-active" class="nav-link">
         <i class="fas fa-satellite fa-2x"></i>
+        <span class="link-text">Home</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+        <a [routerLink]="['/blog']" routerLinkActive="link-active" class="nav-link">
+        <i class="fas fa-space-shuttle fa-2x"></i>
         <span class="link-text">Blog</span>
       </a>
     </li>
 
     <li class="nav-item">
-        <a [routerLink]="['/home']" routerLinkActive="link-active" class="nav-link">
-        <i class="fas fa-space-shuttle fa-2x"></i>
-        <span class="link-text">Aliens</span>
-      </a>
-    </li>
+      <a [routerLink]="['/contact']" routerLinkActive="link-active" class="nav-link">
 
-    <li class="nav-item">
-      <a class="nav-link">
         <i class="fab fa-accessible-icon  fa-2x"></i>
-        <span class="link-text">Space</span>
+        <span class="link-text">Contact</span>
       </a>
     </li>
  
     <li class="nav-item">
-      <a class="nav-link">
+      <a [routerLink]="['/resume']" routerLinkActive="link-active" class="nav-link">
         <i class="fab fa-algolia  fa-2x"></i>
-        <span class="link-text">Shuttle</span>
+        <span class="link-text">Resume</span>
       </a>
     </li>
 

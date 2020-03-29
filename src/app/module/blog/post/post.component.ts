@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.sass']
 })
 export class PostComponent implements OnInit, OnDestroy {
 

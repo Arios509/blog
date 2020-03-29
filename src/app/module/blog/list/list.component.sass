@@ -1,5 +1,11 @@
-$card-shadow: 0 4px 8px rbga(0, 0,0, 0.38)
+@use 'src/styles'
+
+$card-shadow: 0 4px 8px rgba(0,0,0,0.38)
 $card-radius: 0.25em
+
+section
+    min-width: 100vh
+
 .card 
     background: #2a2e35
     color: #b2becd
@@ -14,14 +20,34 @@ $card-radius: 0.25em
 .card-course 
     max-width: 720px
     text-align: center
-    margin: 1em 1em
+    margin: 1em auto
+    @include styles.for-phone-only
+        max-width: 320px
+
+    
 .card 
     .card-content 
         padding: 1em
-
+h1
+    font-size: 3.3em
+    text-align: center
+    padding-bottom: 0.5em
+    color: white
 
 h3 
     color: white
     margin-top: 1rem
     margin-bottom: 1rem
     font-size:1.3em
+        
+.content-article.no-toc 
+    width: auto
+    min-width: 75vw
+
+.row-max-2 
+    gap: 1.75rem
+    grid-template-columns: repeat(auto-fit,minmax(450px,600px))
+
+.row-max-1, .row-max-2 
+    display: grid
+    justify-content: center

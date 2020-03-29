@@ -11,65 +11,19 @@ import { Observable, timer } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-
-  form: FormGroup;
-  registerForm: FormGroup;
-  post = 'assets/post/welcome.md';
-  everySecond$ : Observable<number> = timer(0, 1000);
+  everySecond$: Observable<number> = timer(0, 1000);
   datas = [
     { value: 1 },
     { value: 2 },
     { value: 1 },
   ];
   constructor(private fb: FormBuilder,
-              private _authenticate: AuthenticationService,
-              private _register: RegisterService) { }
+    private _authenticate: AuthenticationService,
+    private _register: RegisterService) { }
 
   ngOnInit(): void {
     // this.everySecond$.subscribe(second => console.log(second));
-    this.initialForm();
-    this.initialRegisterForm();
-  }
-
-
-  initialForm = () => {
-    this.form = this.fb.group({
-      name: ['arios', Validators.required],
-      email: ['arios.te@linkdood.com', Validators.required],
-    });
-  }
-
-  initialRegisterForm = () => {
-    this.registerForm = this.fb.group({
-      username: ['arios', Validators.required],
-      password: ['arios.te@linkdood.com', Validators.required],
-      firstname: ['arios.te@linkdood.com', Validators.required],
-      lastname: ['arios.te@linkdood.com', Validators.required],
-    });
-  }
-
-  onSubmit = () => {
-    this._authenticate.login('username', 'password').subscribe(res => {
-      console.log(res);
-    });
-    // console.log('success clicked')
-  }
-
-  submitRegister = () => {
-    const form = {
-      username: this.registerForm.controls.username.value,
-      password: this.registerForm.controls.password.value,
-      firstname: this.registerForm.controls.firstname.value,
-      lastname: this.registerForm.controls.lastname.value,
-    };
-
-    this._register.register(form)
-      .subscribe(result => {
-        console.log('result', result);
-      }, error => {
-        console.log(error);
-      });
-
 
   }
+
 }

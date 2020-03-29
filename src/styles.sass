@@ -1,5 +1,16 @@
-$font-default : 'Open Sans', sans-serif
+$font-default : 'Baloo Thambi 2', cursive
 $title-color: white
+
+// Small screen 
+@mixin for-phone-only 
+  @media only screen and (max-width: 599px) 
+    @content
+// Large screen
+@mixin for-tablet-only 
+  @media only screen and (min-width: 599px) 
+    @content
+
+
 body 
   color: black
   background-color: white
@@ -23,15 +34,23 @@ body
   color: red
 
 h1,h2,h3,h4,h5,h6 
-  font-weight: 800
+  font-weight: 700 !important
   font-family: $font-default
   
+  
 
-h1,h2,h3,h4,h5,h6 
-  a
-    text-decoration: none
-    color: $title-color
+a
+    text-decoration: none !important
+    color: $title-color !important
 
 img 
   max-width: 100%
   height: auto
+
+.border-bottom
+  border-bottom: 2px dashed #2a2e35
+
+.dark-theme 
+  background: #12181b
+  color: #b2becd
+  transition: all .3s ease

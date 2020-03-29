@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'blog', component: BlogComponent,  loadChildren: () => import('./module/blog/blog.module').then(m => m.BlogViewModule)}
+  { path: 'article', component: BlogComponent,  loadChildren: () => import('./module/blog/blog.module').then(m => m.BlogViewModule)}
 ];
 
 @NgModule({

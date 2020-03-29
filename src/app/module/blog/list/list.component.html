@@ -1,0 +1,16 @@
+<div markdown [src]="'./assets/post/blog-list.md'"></div>
+<div class="">
+  <ng-container *ngFor="let list of lists">
+    <a class="card card-course">
+      <div class="card-content">
+        <div>
+          <img src="assets/images/featured.jpg">
+        </div>
+        <h3>list.title</h3>
+       {{list.description}}
+      </div>
+    </a>
+  </ng-container>
+
+
+</div>

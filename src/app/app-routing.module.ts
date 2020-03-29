@@ -8,9 +8,9 @@ import { ResumeComponent } from './module/resume/resume.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'resume', component: ResumeComponent },
+  { path: 'blog', component: BlogComponent,  loadChildren: () => import('./module/blog/blog.module').then(m => m.BlogViewModule)}
 ];
 
 @NgModule({

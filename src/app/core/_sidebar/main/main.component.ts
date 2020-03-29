@@ -16,10 +16,10 @@ isActive: boolean[] = [];
 
   ngOnInit(): void {
 
-    this.router.events.subscribe((val) => {
-      // see also 
-      console.log(val); 
-  });
+  //   this.router.events.subscribe((val) => {
+  //     // see also 
+  //     console.log(val); 
+  // });
 
     // this.route.params.subscribe(params => {
     //   console.log(`MD: MainComponent -> ngOnInit -> params`, params);

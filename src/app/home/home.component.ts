@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   form: FormGroup;
   registerForm: FormGroup;
+  post = 'assets/post/welcome.md';
   everySecond$ : Observable<number> = timer(0, 1000);
   datas = [
     { value: 1 },

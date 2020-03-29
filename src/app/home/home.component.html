@@ -18,9 +18,8 @@
 <div *ngFor="let data of datas">
   <div [innerHTML]="data.value | uppercase">
   </div>
-  {{data.value | number: '.2' | casesensitive}}
+  {{data.value | number: '.2'}}
 </div>
-
 
 
 
@@ -41,3 +40,5 @@
   <input formControlName="lastname">
   <button type="submit">Submit</button>
 </form>
+
+<div markdown [src]="post" ></div>

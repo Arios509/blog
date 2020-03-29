@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,7 @@ import { JwtInterceptor } from './core/_helpers/jwt.interceptop';
 import { ErrorInterceptor } from './core/_helpers/error.interceptors';
 import { ContactComponent } from './module/contact/contact.component';
 import { ResumeComponent } from './module/resume/resume.component';
+import { BlogViewModule } from './module/blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ResumeComponent } from './module/resume/resume.component';
     FormsModule,
     ReactiveFormsModule,
     AppPipeModule,
-    HttpClientModule
+    HttpClientModule,
+    BlogViewModule,
+    MarkdownModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

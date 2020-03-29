@@ -9,7 +9,7 @@ This wasn't the first time i build a blog, but previously all based on a ready p
 
 ### This is my oldest blog
 
-![Old, but still there](/assets/images/old_blogspot.png)
+![Old, but still there](assets/images/old_blogspot.png)
 
  I remember that I was 16 yo, which still study in secondary school. And I alwasy fancy about those Technology things, and wonder maybe I can build something powerful too. Yet i was too young. Everything doesn't go like what i was dream of, that are more cruel than i can tell. I tried to restart writing a blog with **Digital Ocean** which is a cloud service provider, and this doesn't go very long. Because I was purchase for VM and everything need to set up by own, that's not a problem because i am a system administrator. 
 
@@ -17,7 +17,7 @@ This wasn't the first time i build a blog, but previously all based on a ready p
 
  ### Until I discover Github Pages
 
-![github](/assets/images/github.png)
+![github](assets/images/github.png)
 
 Shame to say that, I like technologies, but I have an old concept that everything need to study from scratch and build it. Similar thing can say is like rebuild the **CIRCLE**. As a frontend developer, until now only discover the beauty of the **Markdown**. I feel late for it. I didn't know until now, that website can transform this markdown format to HTML and this can easy done. Plus, I finally know that's how to publish a page to the **GitHub** and use it as my personal blog which is pretty damn cool. 
 
@@ -26,7 +26,7 @@ With the GitHub pages and Markdown language, it turns me back on to rewrite this
 Anyway, this site still haven't finish yet. Still have a lot need to build for, record down for this checkpoint.
 
 PS : This is draw by me through **Procreate**
-![welcome](/assets/images/welcome.jpg)
+![welcome](assets/images/welcome.jpg)
 
 
 Last updated ***29/03/2020 19:54***

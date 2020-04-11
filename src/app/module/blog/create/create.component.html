@@ -1,0 +1,17 @@
+<h1 class="border-bottom">Let's create some great thing!</h1>
+
+<div class="card">
+  <div class="card-content">
+    <form [formGroup]="mdForm" (ngSubmit)="submitPost()">
+      <input type="text" placeholder="title" formControlName="title">
+      <textarea formControlName="description"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="">
+      <markdown ngPreserveWhitespaces [data]="mdForm.controls.description.value">
+
+      </markdown>
+    </div>
+  </div>
+</div>

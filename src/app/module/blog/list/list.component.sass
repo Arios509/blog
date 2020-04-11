@@ -1,33 +1,8 @@
 @use 'src/styles'
 
-$card-shadow: 0 4px 8px rgba(0,0,0,0.38)
-$card-radius: 0.25em
-
 section
     min-width: 100vh
 
-.card 
-    background: #2a2e35
-    color: #b2becd
-    padding: 0
-    box-shadow: $card-shadow
-    display: inline-flex
-    flex-direction: column
-    margin: 0 0 1em
-    width: 100%
-    transform: translateY(0)
-    border-radius: $card-radius
-.card-course 
-    max-width: 720px
-    text-align: center
-    margin: 1em auto
-    @include styles.for-phone-only
-        max-width: 320px
-
-    
-.card 
-    .card-content 
-        padding: 1em
 h1
     font-size: 3.3em
     text-align: center
@@ -38,7 +13,7 @@ h3
     color: white
     margin-top: 1rem
     margin-bottom: 1rem
-    font-size:1.3em
+    font-size: 1.3em
         
 .content-article.no-toc 
     width: auto

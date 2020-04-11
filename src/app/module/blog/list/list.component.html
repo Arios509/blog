@@ -3,13 +3,13 @@
 <div class="content-article.no-toc ">
   <div class="row-max-2">
     <ng-container *ngFor="let list of lists">
-      <a class="card card-course" [href]="list.link">
+      <a class="card card-course" (click)="onViewPost(list)">
         <div class="card-content">
-          <div>
-            <img [src]="list.img">
-          </div>
+          <!-- <div>
+            <img [src]="list.title">
+          </div> -->
           <h2>{{list.title}}</h2>
-          {{list.description}}
+          <!-- {{list.description}} -->
         </div>
       </a>
     </ng-container>

@@ -1,5 +1,18 @@
-$font-default : 'Open Sans', sans-serif
+$font-default : 'Baloo Thambi 2', cursive
 $title-color: white
+$card-radius: 0.25em
+$card-shadow: 0 4px 8px rgba(0,0,0,0.38)
+
+// Small screen 
+@mixin for-phone-only 
+  @media only screen and (max-width: 599px) 
+    @content
+// Large screen
+@mixin for-tablet-only 
+  @media only screen and (min-width: 599px) 
+    @content
+
+
 body 
   color: black
   background-color: white
@@ -23,15 +36,58 @@ body
   color: red
 
 h1,h2,h3,h4,h5,h6 
-  font-weight: 800
+  font-weight: 700 !important
   font-family: $font-default
   
-
-h1,h2,h3,h4,h5,h6 
-  a
-    text-decoration: none
-    color: $title-color
+  
+a
+  text-decoration: none
+  color: $title-color
 
 img 
   max-width: 100%
   height: auto
+
+.border-bottom
+  border-bottom: 2px dashed #2a2e35
+
+.dark-theme 
+  background: #12181b
+  color: #b2becd
+  transition: all .3s ease
+
+.container-post
+  margin: auto
+  width: 100%
+  max-width: 1080px
+
+  h1,h2,h3,h4,h5,h6 
+    color: $title-color
+  h1
+    text-align: center
+    font-size: 4em
+    border-bottom: 2px dashed #2a2e35
+  p
+    word-wrap: break-word
+    font-size: 1em
+
+.card 
+  background: #2a2e35
+  color: #b2becd
+  padding: 0
+  box-shadow: $card-shadow
+  display: inline-flex
+  flex-direction: column
+  margin: 0 0 1em
+  width: 100%
+  transform: translateY(0)
+  border-radius: $card-radius
+  .card-content 
+    padding: 1em
+.card-course 
+  max-width: 720px
+  text-align: center
+  margin: 1em auto
+  @include for-phone-only
+    max-width: 320px
+    

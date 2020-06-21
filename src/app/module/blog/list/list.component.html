@@ -1,16 +1,22 @@
-<div markdown [src]="'./assets/post/blog-list.md'"></div>
-<div class="">
-  <ng-container *ngFor="let list of lists">
-    <a class="card card-course">
-      <div class="card-content">
-        <div>
-          <img src="assets/images/featured.jpg">
+<h1 class="border-bottom">What's new?</h1>
+<!-- <section> -->
+<div class="content-article.no-toc ">
+  <div class="row-max-2">
+    <ng-container *ngFor="let list of lists">
+      <a class="card card-course" (click)="onViewPost(list)">
+        <div class="card-content">
+          <!-- <div>
+            <img [src]="list.title">
+          </div> -->
+          <h2>{{list.title}}</h2>
+          <!-- {{list.description}} -->
         </div>
-        <h3>list.title</h3>
-       {{list.description}}
-      </div>
-    </a>
-  </ng-container>
-
+      </a>
+    </ng-container>
+  </div>
 
 </div>
+
+
+
+<!-- </section> -->

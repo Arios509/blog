@@ -1,27 +1,28 @@
-$card-shadow: 0 4px 8px rbga(0, 0,0, 0.38)
-$card-radius: 0.25em
-.card 
-    background: #2a2e35
-    color: #b2becd
-    padding: 0
-    box-shadow: $card-shadow
-    display: inline-flex
-    flex-direction: column
-    margin: 0 0 1em
-    width: 100%
-    transform: translateY(0)
-    border-radius: $card-radius
-.card-course 
-    max-width: 720px
-    text-align: center
-    margin: 1em 1em
-.card 
-    .card-content 
-        padding: 1em
+@use 'src/styles'
 
+section
+    min-width: 100vh
+
+h1
+    font-size: 3.3em
+    text-align: center
+    padding-bottom: 0.5em
+    color: white
 
 h3 
     color: white
     margin-top: 1rem
     margin-bottom: 1rem
-    font-size:1.3em
+    font-size: 1.3em
+        
+.content-article.no-toc 
+    width: auto
+    min-width: 75vw
+
+.row-max-2 
+    gap: 1.75rem
+    grid-template-columns: repeat(auto-fit,minmax(450px,600px))
+
+.row-max-1, .row-max-2 
+    display: grid
+    justify-content: center

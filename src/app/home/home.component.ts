@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     private _postService: PostService) { }
 
   ngOnInit(): void {
-    // this.everySecond$.subscribe(second => console.log(second));
     this.intialForm();
   }
 

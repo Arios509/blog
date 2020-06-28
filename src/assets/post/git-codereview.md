@@ -1,5 +1,5 @@
-## Some of the idea about code review
-### And how to make the process smoother
+## Some ideas about code review
+And how to make the process smoother
 
 
 ### What is code review?
@@ -27,16 +27,16 @@ GIT is one of the powerful tools to control for code. Here is the example when d
    2. ```<action>``` can categorize to which function you want to do. Like create a new function, fix a bugs.
    3. ```<function-name>``` replace to the function that you are develop. 
    4. Examples:
-      1. f-create-login
-      2. f-create-signup
-      3. f-create-auth 
-      4. f-create-user-payment
-      5. f-create-admin-auth
-      6. f-create-admin-payment-list
-      7. f-create-admin-vm-list
-      8. f-create-admin-vm-manual
-      9. f-fix-admin-vm -list
-      10. f-fix-login
+      - f-create-login
+      - f-create-signup
+      - f-create-auth 
+      - f-create-user-payment
+      - f-create-admin-auth
+      - f-create-admin-payment-list
+      - f-create-admin-vm-list
+      - f-create-admin-vm-manual
+      - f-fix-admin-vm -list
+      - f-fix-login
 5. Inside each specific branch, then only do the specific part. Dont add on other non related.
 6. After finish, then push to git, and create ```merge request``` to development branch. *For this step will reduce the reviewer to check a lot of the file, and for all this will help the review time shorter*
 7. After you submit, you will get the number of PR like this ![PR Number](https://i.imgur.com/HO8i51I.png)Example from the image the PR number is ```PR#1```
@@ -67,5 +67,5 @@ GIT is one of the powerful tools to control for code. Here is the example when d
 3. East to trace function by function, and make sure the current one is 100% working.
 
 
-
+Last updated ***28/06/2020 21:03***
 

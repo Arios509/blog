@@ -9,7 +9,7 @@ const routes = [
     { path: 'list', component: ListComponent },
     { path: 'create', component: CreateComponent },
     { path: 'post', component: PostComponent },
-    { path: 'post/:id', component: PostComponent, pathMatch: 'full' }
+    { path: 'post/:id', component: PostComponent }
 ];
 
 @NgModule({

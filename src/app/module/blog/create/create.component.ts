@@ -29,7 +29,6 @@ export class CreateComponent implements OnInit {
       description: this.mdForm.controls.description.value
     };
     this._postService.createPost(form).subscribe(res => {
-      console.log(res);
     });
   }
 }

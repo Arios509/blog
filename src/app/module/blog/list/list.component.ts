@@ -10,23 +10,14 @@ import { Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  // lists = data.list;
-  lists: Post[] = [];
+  lists = data.list;
   constructor(private _postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
-    this.onFetchPosts();
-  }
-
-  onFetchPosts = () => {
-    this._postService.fetchPost().subscribe( posts => {
-      this.lists = posts;
-    });
   }
 
   onViewPost = (post) => {
-    localStorage.setItem('post', JSON.stringify(post))
-    this.router.navigate(['/article/post']);
+    this.router.navigate(['article/post', post.link]);
   }
 
 }

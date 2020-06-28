@@ -11,16 +11,15 @@ export class PostComponent implements OnInit, OnDestroy {
 
   private sub: Subscription;
   post = JSON.parse(localStorage.getItem('post'));
-
+  params: String;
   constructor(private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
+    const post = this.route.params.subscribe(params => {
+      this.params = params.id;
+    });
     window.scroll(0, 0);
-    // this.sub = this.route.params.subscribe(params => {
-    //   this.post = './assets/post/' +  params.id + '.md';
-    // });
-
   }
 
   ngOnDestroy(): void {

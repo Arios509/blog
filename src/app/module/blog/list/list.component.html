@@ -5,11 +5,9 @@
     <ng-container *ngFor="let list of lists">
       <a class="card card-course" (click)="onViewPost(list)">
         <div class="card-content">
-          <!-- <div>
-            <img [src]="list.title">
-          </div> -->
+   
           <h2>{{list.title}}</h2>
-          <!-- {{list.description}} -->
+          {{list.description}}
         </div>
       </a>
     </ng-container>

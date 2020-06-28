@@ -1,4 +1,4 @@
 {"list" : [
-    {"title": "Welcome", "img":"assets/images/welcome.jpg", "description":"This is my first blog post in angular project.", "link": "article/post/welcome"},
-    {"title": "Git + Code Review", "img":"assets/images/welcome.jpg", "description":"Understanding on code review with git.", "link": "article/post/git-codereview"}
+    {"title": "Welcome", "img":"assets/images/welcome.jpg", "description":"This is my first blog post in angular project.", "link": "assets/post/welcome.md"},
+    {"title": "Git + Code Review", "img":"assets/images/welcome.jpg", "description":"Understanding on code review with git.", "link": "assets/post/git-codereview.md"}
 ]}
